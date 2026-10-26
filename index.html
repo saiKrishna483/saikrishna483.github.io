@@ -110,6 +110,39 @@
     .card p.about { flex: 1; }
     .card .card-links { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 8px; }
  
+    /* Featured project: full width, with tech badges and a live preview */
+    .card.featured { grid-column: 1 / -1; }
+    .featured-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+      gap: 32px;
+      align-items: start;
+    }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; padding: 0; list-style: none; }
+    .badges li {
+      padding: 4px 12px;
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: #eaf5f0;
+    }
+    .features { margin: 0 0 20px; padding-left: 22px; }
+    .features li { margin-bottom: 6px; }
+    .preview { border: 1px solid var(--line); background: var(--bg); }
+    .preview .bar {
+      padding: 8px 14px;
+      border-bottom: 1px solid var(--line);
+      background: var(--card);
+      font-size: 0.9rem;
+      color: var(--muted);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .preview iframe { display: block; width: 100%; height: 480px; border: 0; background: #fff; }
+    .preview .note { margin: 0; padding: 10px 14px; font-size: 0.9rem; color: var(--muted); max-width: none; }
+ 
     /* Certificates and education rows */
     .rows { border-top: 1px solid var(--line); }
     .row {
@@ -137,6 +170,10 @@
       .section { padding-top: 56px; }
       .section:last-of-type { padding-bottom: 56px; }
       .row { grid-template-columns: 1fr; gap: 4px; }
+    }
+    @media (max-width: 860px) {
+      .featured-body { grid-template-columns: 1fr; }
+      .preview iframe { height: 420px; }
     }
   </style>
 </head>
@@ -232,13 +269,35 @@
             </div>
           </article>
  
-          <article class="card">
+          <article class="card featured">
             <h3>Fresher Skill Gap Checker</h3>
-            <p class="stack">Next.js, React and JavaScript</p>
-            <p class="about">Web app that compares a job description with your skills and shows a match percentage, the skills you have and the skills you are missing. Built with Next.js, React and Tailwind CSS, deployed on Vercel.</p>
-            <div class="card-links">
-              <a href="https://skill-gap-checker-peach.vercel.app">Open live app</a>
-              <a href="https://github.com/saiKrishna483/skill-gap-checker">View on GitHub</a>
+            <ul class="badges" aria-label="Built with">
+              <li>Next.js</li>
+              <li>React</li>
+              <li>JavaScript</li>
+              <li>Tailwind CSS</li>
+              <li>Vercel</li>
+              <li>GitHub</li>
+            </ul>
+            <div class="featured-body">
+              <div>
+                <p>A full web app, not a static page. You paste a job description, pick the skills you already have, and it shows what you match and what you are missing.</p>
+                <ul class="features">
+                  <li>React components with state for the paste box, skill buttons and results</li>
+                  <li>Keyword matching that finds the skills a job description asks for</li>
+                  <li>Match percentage, plus the skills you have and the skills you are missing</li>
+                  <li>Built as a Next.js project, pushed to GitHub and deployed on Vercel</li>
+                </ul>
+                <div class="card-links">
+                  <a class="button primary" href="https://skill-gap-checker-peach.vercel.app">Open live app</a>
+                  <a class="button" href="https://github.com/saiKrishna483/skill-gap-checker">View code on GitHub</a>
+                </div>
+              </div>
+              <div class="preview">
+                <div class="bar">skill-gap-checker-peach.vercel.app</div>
+                <iframe src="https://skill-gap-checker-peach.vercel.app" title="Live preview of the Fresher Skill Gap Checker" loading="lazy"></iframe>
+                <p class="note">This is the running app. If it does not load here, use the Open live app button.</p>
+              </div>
             </div>
           </article>
  
