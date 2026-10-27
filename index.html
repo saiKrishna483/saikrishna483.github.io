@@ -17,11 +17,11 @@
       --line: #d9e1e8;
       --muted: #566677;
     }
- 
+
     * { box-sizing: border-box; }
- 
+
     html { scroll-behavior: smooth; }
- 
+
     body {
       margin: 0;
       font-family: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
@@ -30,16 +30,16 @@
       color: var(--navy);
       background: var(--bg);
     }
- 
+
     a { color: var(--green); }
     a:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
- 
+
     .wrap {
       max-width: 1140px;
       margin: 0 auto;
       padding: 0 24px;
     }
- 
+
     /* Top bar */
     .topbar {
       border-bottom: 1px solid var(--line);
@@ -58,19 +58,19 @@
     .topbar nav { display: flex; gap: 24px; flex-wrap: wrap; }
     .topbar nav a { color: var(--navy); text-decoration: none; }
     .topbar nav a:hover { color: var(--green); text-decoration: underline; }
- 
+
     /* Every section gets the same space above it.
        This one rule is what keeps Projects and Certificates from touching. */
     .section { padding-top: 80px; }
     .section:last-of-type { padding-bottom: 80px; }
- 
+
     h1, h2, h3 { line-height: 1.2; margin: 0; }
     h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); }
     h2 { font-size: 2.2rem; margin-bottom: 28px; }
     h3 { font-size: 1.5rem; }
- 
+
     p { margin: 0 0 16px; max-width: 68ch; }
- 
+
     /* Hero */
     .hero { padding-top: 72px; }
     .hero .headline { font-size: 1.35rem; color: var(--muted); margin: 12px 0 24px; }
@@ -86,12 +86,12 @@
     }
     .button.primary { background: var(--green); color: #fff; }
     .button:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
- 
+
     /* Skills */
     .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
     .skills h3 { font-size: 1.2rem; margin-bottom: 8px; }
     .skills p { margin: 0; color: var(--muted); }
- 
+
     /* Project cards */
     .projects {
       display: grid;
@@ -109,7 +109,7 @@
     .card .stack { color: var(--muted); margin: 8px 0 16px; }
     .card p.about { flex: 1; }
     .card .card-links { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 8px; }
- 
+
     /* Featured project: full width, with tech badges and a live preview */
     .card.featured { grid-column: 1 / -1; }
     .featured-body {
@@ -142,7 +142,7 @@
     }
     .preview iframe { display: block; width: 100%; height: 480px; border: 0; background: #fff; }
     .preview .note { margin: 0; padding: 10px 14px; font-size: 0.9rem; color: var(--muted); max-width: none; }
- 
+
     /* Certificates and education rows */
     .rows { border-top: 1px solid var(--line); }
     .row {
@@ -155,7 +155,7 @@
     .row .when { color: var(--muted); }
     .row h3 { font-size: 1.35rem; }
     .row .by { color: var(--muted); margin: 0; }
- 
+
     /* Footer */
     .footer {
       border-top: 1px solid var(--line);
@@ -164,7 +164,7 @@
       color: var(--muted);
     }
     .footer p { margin: 0; max-width: none; }
- 
+
     @media (max-width: 640px) {
       body { font-size: 1.05rem; }
       .section { padding-top: 56px; }
@@ -178,7 +178,7 @@
   </style>
 </head>
 <body>
- 
+
   <header class="topbar">
     <div class="wrap">
       <a class="brand" href="#top">Sai Krishna Thotte</a>
@@ -192,9 +192,9 @@
       </nav>
     </div>
   </header>
- 
+
   <main id="top">
- 
+
     <section class="section hero" id="hero">
       <div class="wrap">
         <h1>Sai Krishna Thotte</h1>
@@ -207,7 +207,7 @@
         </div>
       </div>
     </section>
- 
+
     <section class="section" id="about">
       <div class="wrap">
         <h2>About</h2>
@@ -215,7 +215,7 @@
         <p>I build my skills by doing real projects with real datasets, and every project below is on GitHub.</p>
       </div>
     </section>
- 
+
     <section class="section" id="skills">
       <div class="wrap">
         <h2>Skills</h2>
@@ -235,12 +235,12 @@
         </div>
       </div>
     </section>
- 
+
     <section class="section" id="projects">
       <div class="wrap">
         <h2>Projects</h2>
         <div class="projects">
- 
+
           <article class="card">
             <h3>IPL 2026 SQL Analysis</h3>
             <p class="stack">MySQL</p>
@@ -249,7 +249,7 @@
               <a href="https://github.com/saiKrishna483/ipl-sql-analysis">View on GitHub</a>
             </div>
           </article>
- 
+
           <article class="card">
             <h3>Zomato Hyderabad Restaurant Analysis</h3>
             <p class="stack">Python, Pandas, Matplotlib and Seaborn</p>
@@ -258,7 +258,7 @@
               <a href="https://github.com/saiKrishna483/zomato-hyderabad-analysis">View on GitHub</a>
             </div>
           </article>
- 
+
           <article class="card">
             <h3>Superstore Sales Dashboard</h3>
             <p class="stack">Power BI, Power Query and DAX</p>
@@ -268,25 +268,25 @@
               <a href="https://github.com/saiKrishna483">View on GitHub</a>
             </div>
           </article>
- 
+
           <article class="card featured">
             <h3>Fresher Skill Gap Checker</h3>
             <ul class="badges" aria-label="Built with">
               <li>Next.js</li>
               <li>React</li>
-              <li>JavaScript</li>
+              <li>TypeScript</li>
               <li>Tailwind CSS</li>
               <li>Vercel</li>
               <li>GitHub</li>
             </ul>
             <div class="featured-body">
               <div>
-                <p>A full web app, not a static page. You paste a job description, pick the skills you already have, and it shows what you match and what you are missing.</p>
+                <p>A full web app, not a static page. You choose a role, paste a job description and select the skills you have. It tells you if the job does not match the role you chose, or else shows what you match and what you are missing.</p>
                 <ul class="features">
-                  <li>React components with state for the paste box, skill buttons and results</li>
-                  <li>Keyword matching that finds the skills a job description asks for</li>
+                  <li>8 IT roles, from Data Analyst and Data Engineer to Java Developer and ML / AI Engineer, each with its own skill list</li>
+                  <li>Role detection: scores the job description against every role and names the closest one when it is not your chosen role</li>
                   <li>Match percentage, plus the skills you have and the skills you are missing</li>
-                  <li>Built as a Next.js project, pushed to GitHub and deployed on Vercel</li>
+                  <li>Built with Next.js, React and TypeScript, pushed to GitHub and deployed on Vercel</li>
                 </ul>
                 <div class="card-links">
                   <a class="button primary" href="https://skill-gap-checker-peach.vercel.app">Open live app</a>
@@ -300,16 +300,16 @@
               </div>
             </div>
           </article>
- 
+
         </div>
       </div>
     </section>
- 
+
     <section class="section" id="certificates">
       <div class="wrap">
         <h2>Certificates</h2>
         <div class="rows">
- 
+
           <div class="row">
             <div class="when">Jul 2024</div>
             <div>
@@ -317,7 +317,7 @@
               <p class="by">Great Learning</p>
             </div>
           </div>
- 
+
           <div class="row">
             <div class="when">Jul 2024 to Oct 2024</div>
             <div>
@@ -325,7 +325,7 @@
               <p class="by">IIT Kharagpur, Elite certificate</p>
             </div>
           </div>
- 
+
           <div class="row">
             <div class="when">Feb 2025</div>
             <div>
@@ -333,7 +333,7 @@
               <p class="by">Be10X</p>
             </div>
           </div>
- 
+
           <div class="row">
             <div class="when">Mar 2025</div>
             <div>
@@ -341,7 +341,7 @@
               <p class="by">Valid until Mar 2027</p>
             </div>
           </div>
- 
+
           <div class="row">
             <div class="when">Jan 2026</div>
             <div>
@@ -349,16 +349,16 @@
               <p class="by">Oracle</p>
             </div>
           </div>
- 
+
         </div>
       </div>
     </section>
- 
+
     <section class="section" id="education">
       <div class="wrap">
         <h2>Education</h2>
         <div class="rows">
- 
+
           <div class="row">
             <div class="when">Ongoing</div>
             <div>
@@ -366,7 +366,7 @@
               <p class="by">Anurag University</p>
             </div>
           </div>
- 
+
           <div class="row">
             <div class="when">2022 to 2026</div>
             <div>
@@ -374,7 +374,7 @@
               <p class="by">Saveetha School of Engineering, CGPA 8.16</p>
             </div>
           </div>
- 
+
           <div class="row">
             <div class="when">2020 to 2022</div>
             <div>
@@ -382,11 +382,11 @@
               <p class="by">Resonance Junior College, 90.8%</p>
             </div>
           </div>
- 
+
         </div>
       </div>
     </section>
- 
+
     <section class="section" id="contact">
       <div class="wrap">
         <h2>Contact</h2>
@@ -398,16 +398,14 @@
         </p>
       </div>
     </section>
- 
+
   </main>
- 
+
   <footer class="footer">
     <div class="wrap">
       <p>&copy; 2026 Sai Krishna Thotte. Khammam, Telangana.</p>
     </div>
   </footer>
- 
+
 </body>
 </html>
- 
-Claude finished the response
